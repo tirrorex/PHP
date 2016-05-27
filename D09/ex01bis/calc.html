@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	</head>
+	<body>
+		<form id="calculator">
+			<input type="text" id="lvalue" placeholder="left operand">
+			<input type="text" id="rvalue" placeholder="right operand">
+			<input type="submit" value="Try me!" id="yolo">
+		</form>
+		<select name="calculator" form="calculator" id="operand">
+		  <option value="+">+</option>
+		  <option value="-">-</option>
+		  <option value="*">*</option>
+		  <option value="/">/</option>
+		   <option value="%">%</option>
+		</select>
+
+		<script>
+		setInterval(function(){ alert("Please, use me..."); }, 30000);
+		$("#yolo").click(function (){
+			var lvalue = $("#lvalue").val();
+			var rvalue = $("#rvalue").val();
+			var operand = $("#operand").val();
+			var result;
+			if (Math.floor($("#lvalue").val()) == $("#lvalue").val() && $.isNumeric($("#lvalue").val()))
+			{
+				if (Math.floor($("#rvalue").val()) == $("#rvalue").val() && $.isNumeric($("#rvalue").val()))
+				{
+					 if (lvalue >= 0 && rvalue >= 0)
+					 {
+					 	if ((operand == "/" || operand == "%") && (lvalue == "0" || rvalue == "0"))
+							result = "It's over 9000!";
+						else
+							result = eval(lvalue + operand + rvalue);
+					 }
+					 else
+					 	result = "Error :(";
+				}
+				else
+					result = "Error :(";
+			}
+			else
+				result = "Error :(";
+			alert(result);
+		 });
+		</script>
+	</body>
+</html>

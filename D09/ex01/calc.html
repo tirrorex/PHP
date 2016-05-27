@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form id="calculator">
+			<input type="text" id="lvalue" placeholder="left operand">
+			<input type="text" id="rvalue" placeholder="right operand">
+			<input type="submit" value="Try me!" onclick="compute()">
+		</form>
+		<select name="calculator" form="calculator" id="operand">
+		  <option value="+">+</option>
+		  <option value="-">-</option>
+		  <option value="*">*</option>
+		  <option value="/">/</option>
+		   <option value="%">%</option>
+		</select>
+
+		<script type="text/javascript">
+		setInterval(function(){ alert("Please, use me..."); }, 30000);
+		function compute() {
+			var lvalue = document.getElementById('lvalue').value;
+			var rvalue = document.getElementById('rvalue').value;
+			var operand = document.getElementById('operand').value;
+			var result;
+			var result;
+			if (isInt(lvalue))
+			{
+				if (isInt(rvalue))
+				{
+					 if (lvalue >= 0 && rvalue >= 0)
+					 {
+					 	if ((operand == "/" || operand == "%") && (lvalue == "0" || rvalue == "0"))
+							result = "It's over 9000!";
+						else
+							result = eval(lvalue + operand + rvalue);
+					 }
+					 else
+					 	result = "Error :(";
+				}
+				else
+					result = "Error :(";
+			}
+			else
+				result = "Error :(";
+			alert(result);
+		}
+		function isInt(n) {
+        return n % 1 == 0;
+    }
+		</script>
+	</body>
+</html>

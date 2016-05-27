@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+		#balloon {
+			width:200px;
+			height:200px;
+			background-color:red;
+			border-radius:100%;
+		}
+		</style>
+		
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	</head>
+	<body>
+		<div id="balloon"></div>
+		<script>
+			$("#balloon").click(function (){
+				var color = $(this).css("background-color");
+				var size = $(this).css("Height");
+				if (size < "415")
+				{
+					if (color == "rgb(255, 0, 0)")
+					 	$(this).css("backgroundColor", "green");
+					if (color == "rgb(0, 128, 0)")
+						$(this).css("backgroundColor", "blue");
+					if (color == "rgb(0, 0, 255)")
+						$(this).css("backgroundColor", "red");
+					$(this).css("width", "+=10");
+					$(this).css("height", "+=10");
+				}
+				else
+				{
+					$(this).css("width", 200);
+					$(this).css("height",  200);
+				}
+			});
+			$("#balloon").mouseout(function() {
+				var color = $(this).css("background-color");
+				var size = $(this).css("Height");
+				if (color == "rgb(255, 0, 0)")
+						$(this).css("backgroundColor", "blue");
+				if (color == "rgb(0, 0, 255)")
+					$(this).css("backgroundColor", "green");
+				if (color == "rgb(0, 128, 0)")
+					$(this).css("backgroundColor", "red");
+				if (size >= "205")
+				{
+
+					$(this).css("width", "-=5");
+					$(this).css("height", "-=5");
+				}
+			});
+		</script>
+	</body>
+</html>

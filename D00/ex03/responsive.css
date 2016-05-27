@@ -1,0 +1,113 @@
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 680px) {
+
+
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+table {
+	width: 95%;
+	margin: 2.5%;
+}
+
+tr {
+	height: 3em;
+	width: 3,33%;
+}
+
+span {
+	height: 3em;
+	width: 3,33%;
+}
+
+div:first-child {
+	text-align: right;
+	font-size: 1vw;
+}
+
+div:nth-child(2) {
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+div:nth-child(3) {
+	text-align: left;
+	font-size: 1vw;
+}
+
+tr td:nth-child(1) {
+	background-color: grey;
+}
+
+tr td:nth-child(2) {
+	background-color: #948676;
+}
+tr td:nth-child(3) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(4) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(5) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(6) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(7) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(8) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(9) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(10) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(11) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(12) {
+	background-color: #D4BFA9;
+}
+
+tr td:nth-child(17) {
+	background-color: lightyellow;
+}
+
+tr td:nth-child(18) {
+	background-color: lightblue;
+}
+
+caption {
+	font-weight: bold;
+	font-size: 300%;
+}
+
+img {
+	height: 80px;
+	width: 80px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+		
